@@ -89,10 +89,7 @@
                                         <div class="form-group">
                                             <label for="Classroom_id">Niveau scolaire : <span class="text-danger">*</span></label>
                                             <select class="custom-select mr-sm-2" name="Classroom_id">
-                                                <option selected disabled>Select
-                                                @foreach($classrooms as $classroom)
-                                                <option  value="{{ $classroom->id }}">{{ $classroom->Name_Class}}</option>
-                                            @endforeach
+                                               
                                             </select>
                                         </div>
                                     </div>
@@ -101,11 +98,7 @@
                                         <div class="form-group">
                                             <label for="section_id">Les Classes: </label>
                                             <select class="custom-select mr-sm-2" name="section_id">
-						 
-                                                    <option selected disabled>Select
-                                                    @foreach($sections as $classroom)
-                                                    <option  value="{{ $classroom->id }}">{{ $classroom->Name_Section}}</option>
-                                                @endforeach
+						
                                                 </select>
                                             </select>
                                         </div>
@@ -123,27 +116,58 @@
     <!-- row closed -->
 @endsection
 @section('js')
-  
-    <script>
+     <script>
         $(document).ready(function () {
             $('select[name="Grade_id"]').on('change', function () {
                 var Grade_id = $(this).val();
                 if (Grade_id) {
                     $.ajax({
-                        url: "{{ URL::to('classes') }}/" + Grade_id,
+                        url: "{{ URL::to('Get_classrooms') }}/" + Grade_id,
                         type: "GET",
                         dataType: "json",
                         success: function (data) {
-                            $('select[name="Class_id"]').empty();
+                            $('select[name="Classroom_id"]').empty();
                             $.each(data, function (key, value) {
-                                $('select[name="Class_id"]').append('<option value="' + key + '">' + value + '</option>');
+                                $('select[name="Classroom_id"]').append('<option selected disabled >Choisir...</option>');
+                                $('select[name="Classroom_id"]').append('<option value="' + key + '">' + value + '</option>');
                             });
+
                         },
                     });
-                } else {
+                }
+
+                else {
                     console.log('AJAX load did not work');
                 }
             });
         });
     </script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('select[name="Classroom_id"]').on('change', function () {
+                var Classroom_id = $(this).val();
+                if (Classroom_id) {
+                    $.ajax({
+                        url: "{{ URL::to('Get_Sections') }}/" + Classroom_id,
+                        type: "GET",
+                        dataType: "json",
+                        success: function (data) {
+                            $('select[name="section_id"]').empty();
+                            $.each(data, function (key, value) {
+                                $('select[name="section_id"]').append('<option value="' + key + '">' + value + '</option>');
+                            });
+
+                        },
+                    });
+                }
+
+                else {
+                    console.log('AJAX load did not work');
+                }
+            });
+        });
+    </script>
+                                               
 @endsection

@@ -4,6 +4,7 @@
    Tableau de bord
 @stop
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="HTML5 Template" />
@@ -12,8 +13,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     @include('layouts.head')
     @livewireStyles
+
+
 </head>
 
 <body style="font-family: 'Cairo', sans-serif">
@@ -24,7 +28,7 @@
 preloader -->
 
     <div id="pre-loader">
-        <img src="{{ URL::asset('assets/images/pre-loader/loader-01.svg') }}" alt="">
+        <img src="{{ URL::asset('assets/images/pre-loader/Spinner-5.gif') }}" alt="">
     </div>
 
     <!--=================================
@@ -57,7 +61,8 @@ preloader -->
                         <div class="clearfix">
                             <div class="float-left">
                                     <span class="text-success">
-                                        <i class="fas fa-user-graduate highlight-icon" aria-hidden="true"></i>
+		<i class="fa fa-user" aria-hidden="true"></i>
+                                   
                                     </span>
                             </div>
                             <div class="float-right text-right">
@@ -76,9 +81,8 @@ preloader -->
                     <div class="card-body">
                         <div class="clearfix">
                             <div class="float-left">
-                                    <span class="text-warning">
-                                        <i class="fas fa-chalkboard-teacher highlight-icon" aria-hidden="true"></i>
-                                    </span>
+                                   <i class="bi bi-people"></i>
+                                   
                             </div>
                             <div class="float-right text-right">
                                 <p class="card-text text-dark">Le nombre des profs </p>

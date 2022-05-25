@@ -6,19 +6,19 @@
                 <ul class="nav navbar-nav side-menu" id="sidebarnav">
                     <!-- menu item Dashboard-->
                     <li>
-                        <a href="{{ url('/dashboard') }}">
+                        <a href="">
                             <div class="pull-left"><i class="ti-home"></i><span class="right-nav-text">Tableau de bord</span>
                             </div>
                             <div class="clearfix"></div>
                         </a>
                     </li>
                     <!-- menu title -->
-                    <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">Programme  gestion des écoles  (Younes Sghyer)</li>
+                    <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">gestion des écoles  realisé par : Younes Sghyer</li>
 
                     <!-- Grades-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Grades-menu">
-                            <div class="pull-left"><i class="fas fa-school"></i><span
+                            <div class="pull-left"><i <i class="" aria-hidden="true"></i><span
                                     class="right-nav-text">Cycles</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -30,7 +30,7 @@
                     <!-- classes-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#classes-menu">
-                            <div class="pull-left"><i class="fa fa-building"></i><span
+                            <div class="pull-left"><i class=""></i><span
                                     class="right-nav-text">Niveaux Scolaire</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -44,7 +44,7 @@
                     <!-- sections-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#sections-menu">
-                            <div class="pull-left"><i class="fas fa-chalkboard"></i></i><span
+                            <div class="pull-left"><i class="fas fa-chalkboard aria-hidden="true"></i><span
                                     class="right-nav-text">Les Classes</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -58,8 +58,8 @@
                     <!-- students-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#students-menu">
-                            <div class="pull-left"><i class="fas fa-user-graduate"></i></i></i><span
-                                    class="right-nav-text">Les étudiants</span></div>
+                            <div class="pull-left"><i class="fa" aria-hidden="true"></i>
+			<span class="right-nav-text">Les étudiants</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
@@ -74,7 +74,7 @@
                     <!-- Teachers-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Teachers-menu">
-                            <div class="pull-left"><i class="fas fa-chalkboard-teacher"></i></i><span
+                            <div class="pull-left"><i class="fas fa-chalkboard-teacher"></i><span
                                     class="right-nav-text">Les professeurs</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -189,7 +189,18 @@
 
 
 
-                    <!-- Onlinec lasses-->
+                     <!-- Online classes-->
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#Onlineclasses-icon">
+                            <div class="pull-left"><i class="fas fa-video"></i><span class="right-nav-text">Séances  en ligne </span></div>
+                            <div class="pull-right"><i class="ti-plus"></i></div>
+                            <div class="clearfix"></div>
+                        </a>
+                        <ul id="Onlineclasses-icon" class="collapse" data-parent="#sidebarnav">
+                            <li> <a href="{{route('online_classes.index')}}">séances  en ligne avec Zoom</a> </li>
+                        </ul>
+                    </li>
+
 
 
 

@@ -40,7 +40,6 @@ class Student extends Model
     }
 
 
-    // علاقة بين الطلاب والصور لجلب اسم الصور  في جدول الطلاب
 
 
     // علاقة بين الطلاب والجنسيات  لجلب اسم الجنسية  في جدول الجنسيات
@@ -56,6 +55,10 @@ class Student extends Model
     public function myparent()
     {
         return $this->belongsTo('App\Models\My_Parent', 'parent_id');
+    }
+    public function attendance()
+    {
+        return $this->hasMany('App\Models\Attendance', 'student_id');
     }
 
 }

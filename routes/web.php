@@ -121,6 +121,9 @@ Route::group(['namespace' => 'Students'], function () {
     Route::get('Download_attachment/{studentsname}/{filename}', 'StudentController@Download_attachment')->name('Download_attachment');
     Route::post('Delete_attachment', 'StudentController@Delete_attachment')->name('Delete_attachment');
 	Route::resource('Attendance', 'AttendanceController');
+	Route::get('/indirect', 'OnlineClasseController@indirectCreate')->name('indirect.create');
+        Route::post('/indirect', 'OnlineClasseController@storeIndirect')->name('indirect.store');
+        Route::resource('online_classes', 'OnlineClasseController');
 
 });
  //==============================Subjects============================

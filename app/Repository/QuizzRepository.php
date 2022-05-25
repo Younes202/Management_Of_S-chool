@@ -23,8 +23,7 @@ class QuizzRepository implements QuizzRepositoryInterface
     public function create()
     {
         $data['grades'] = Grade::all();
-        $data['classrooms'] = Classroom::all();
-        $data['sections'] = Section::all();
+      
         $data['subjects'] = Subject::all();
         $data['teachers'] = Teacher::all();
         return view('pages.Quizzes.create', $data);

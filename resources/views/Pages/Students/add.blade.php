@@ -1,14 +1,14 @@
 @extends('layouts.master')
 @section('css')
-    @toastr_css
+   
 @section('title')
-    {{trans('main_trans.add_student')}}
+  Ajouter un Etudiant
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    {{trans('main_trans.add_student')}}
+    Ajouter un Etudiant
 @stop
 <!-- breadcrumb -->
 @endsection

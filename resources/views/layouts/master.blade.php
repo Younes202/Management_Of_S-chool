@@ -19,7 +19,7 @@
  preloader -->
 
         <div id="pre-loader">
-            <img src="assets/images/pre-loader/loader-01.svg" alt="">
+            <img src="assets/images/pre-loader/Spinner-5.gif" alt="">
         </div>
 
         <!--=================================
